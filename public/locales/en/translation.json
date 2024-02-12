@@ -1,0 +1,12 @@
+{
+  "change-lang": "Change language",
+  "links": {
+    "main": "Main page",
+    "about": "About us"
+  },
+  "error": "An error occurred :(",
+  "refresh-page": "Refresh page",
+  "sidebar": {
+    "toggle": "toggle"
+  }
+}

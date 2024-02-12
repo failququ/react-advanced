@@ -1,0 +1,15 @@
+.link {
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid var(--inverted-primary-color);
+  }
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--inverted-primary-color);
+}
