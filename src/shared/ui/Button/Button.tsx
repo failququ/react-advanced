@@ -18,11 +18,15 @@ const Button: FC<ButtonProps> = (props) => {
     <button
       type="button"
       className={
-        classNames(styles.button, 
-        { [styles.clean]: theme === 'clean',
-          [styles.outlined]: theme === 'outlined',
-        },
-        [className])}
+        classNames(
+          styles.button,
+          {
+            [styles.clean]: theme === 'clean',
+            [styles.outlined]: theme === 'outlined',
+          },
+          [className],
+        )
+}
       {...restProps}
     >
       {children}

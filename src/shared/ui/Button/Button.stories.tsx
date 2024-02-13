@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Button from './Button';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/themeDecorator';
-
+import Button from './Button';
 
 const meta = {
   title: 'shared/Button',
@@ -15,29 +14,28 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    children: 'TEXT'
+    children: 'TEXT',
   },
 };
 
 export const Clean: Story = {
   args: {
     children: 'TEXT',
-    theme: 'clean'
+    theme: 'clean',
   },
 };
 
 export const Outlined: Story = {
   args: {
     children: 'TEXT',
-    theme: 'outlined'
+    theme: 'outlined',
   },
 };
 
 export const OutlinedDark: Story = {
   args: {
     children: 'TEXT',
-    theme: 'outlined'
+    theme: 'outlined',
   },
-  decorators: [ThemeDecorator(Theme.DARK)]
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
-

@@ -1,16 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import UILink from './UILink';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/themeDecorator';
-
+import UILink from './UILink';
 
 const meta = {
   title: 'shared/UILink',
   component: UILink,
   args: {
-    to: '/'
-  }
+    to: '/',
+  },
 } satisfies Meta<typeof UILink>;
 
 export default meta;
@@ -19,30 +18,29 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     children: 'TEXT',
-    theme: 'primary'
+    theme: 'primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
     children: 'TEXT',
-    theme: 'secondary'
+    theme: 'secondary',
   },
 };
 
 export const PrimaryDark: Story = {
   args: {
     children: 'TEXT',
-    theme: 'primary'
+    theme: 'primary',
   },
-  decorators: [ThemeDecorator(Theme.DARK)]
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const SecondaryDark: Story = {
   args: {
     children: 'TEXT',
-    theme: 'secondary'
+    theme: 'secondary',
   },
-  decorators: [ThemeDecorator(Theme.DARK)]
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
-

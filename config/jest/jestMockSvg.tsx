@@ -1,8 +1,5 @@
-
-const jestMockSvg = () => {
-  return (
-    <div/>
-  );
-};
+const jestMockSvg = () => (
+  <div />
+);
 
 export default jestMockSvg;

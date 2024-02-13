@@ -2,9 +2,8 @@ import { useTranslation } from 'react-i18next';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import UILink from 'shared/ui/UILink/UILink';
-import styles from './Navbar.module.scss';
-
 import type { FC } from 'react';
+import styles from './Navbar.module.scss';
 
 interface NavbarProps {
   className?: string;
@@ -23,6 +22,5 @@ const Navbar: FC<NavbarProps> = (props) => {
     </div>
   );
 };
-
 
 export default Navbar;

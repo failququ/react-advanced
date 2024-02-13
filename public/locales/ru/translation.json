@@ -8,5 +8,6 @@
   "refresh-page": "Обновить страницу",
   "sidebar": {
     "toggle": "тоггл"
-  }
+  },
+  "throw-error": "Выбросить ошибку"
 }

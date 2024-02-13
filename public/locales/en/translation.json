@@ -8,5 +8,6 @@
   "refresh-page": "Refresh page",
   "sidebar": {
     "toggle": "toggle"
-  }
+  },
+  "throw-error": "throw error"
 }

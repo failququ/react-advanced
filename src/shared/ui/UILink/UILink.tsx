@@ -1,9 +1,8 @@
 import { LinkProps, Link } from 'react-router-dom';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-import styles from './UILink.module.scss';
-
 import type { FC } from 'react';
+import styles from './UILink.module.scss';
 
 type LinkTheme = 'primary' | 'secondary';
 

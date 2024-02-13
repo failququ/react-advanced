@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
@@ -27,9 +28,22 @@ module.exports = {
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAllAttributes: true }],
+    'i18next/no-literal-string': ['error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid', 'to', 'theme'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };

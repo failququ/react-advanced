@@ -3,8 +3,8 @@ import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import ThemeDark from 'shared/assets/icons/theme-dark.svg';
 import ThemeLight from 'shared/assets/icons/theme-light.svg';
 import Button from 'shared/ui/Button/Button';
-import styles from './ThemeSwitch.module.scss';
 import type { FC } from 'react';
+import styles from './ThemeSwitch.module.scss';
 
 interface Props {
   className?: string;

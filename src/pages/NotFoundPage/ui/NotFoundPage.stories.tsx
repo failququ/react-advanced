@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import NotFoundPage from './NotFoundPage';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/themeDecorator';
-
+import NotFoundPage from './NotFoundPage';
 
 const meta = {
   title: 'pages/NotFoundPage',
@@ -21,7 +20,5 @@ export const Light: Story = {
 export const Dark: Story = {
   args: {
   },
-  decorators: [ThemeDecorator(Theme.DARK)]
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-

@@ -1,3 +1,3 @@
-import ErrorFallback from "./ui/ErrorFallback";
+import ErrorFallback from './ui/ErrorFallback';
 
 export { ErrorFallback };

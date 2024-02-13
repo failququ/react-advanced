@@ -1,7 +1,6 @@
-import React, { ErrorInfo, ReactNode, Suspense } from "react";
+import React, { ErrorInfo, ReactNode, Suspense } from 'react';
 
-import { ErrorFallback } from "widgets/ErrorFallback";
-
+import { ErrorFallback } from 'widgets/ErrorFallback';
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -12,7 +11,6 @@ interface ErrorBoundaryState {
 }
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
@@ -31,10 +29,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     const { children } = this.props;
 
     if (hasError) {
-      return <Suspense fallback=''><ErrorFallback /></Suspense>;
+      return <Suspense fallback=""><ErrorFallback /></Suspense>;
     }
 
-    return children; 
+    return children;
   }
 }
 
