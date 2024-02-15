@@ -32,10 +32,67 @@ export const Outlined: Story = {
   },
 };
 
+export const OutlinedMedium: Story = {
+  args: {
+    children: 'TEXT',
+    theme: 'outlined',
+    size: 'medium',
+  },
+};
+
+export const OutlinedLarge: Story = {
+  args: {
+    children: 'TEXT',
+    theme: 'outlined',
+    size: 'large',
+  },
+};
+
 export const OutlinedDark: Story = {
   args: {
     children: 'TEXT',
     theme: 'outlined',
   },
   decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const Filled: Story = {
+  args: {
+    children: 'TEXT',
+    theme: 'filled',
+  },
+};
+
+export const FilledInverted: Story = {
+  args: {
+    children: 'TEXT',
+    theme: 'filledInverted',
+  },
+};
+
+export const SquareSmall: Story = {
+  args: {
+    children: '>',
+    theme: 'filledInverted',
+    square: true,
+    size: 'small',
+  },
+};
+
+export const SquareMedium: Story = {
+  args: {
+    children: '>',
+    theme: 'filledInverted',
+    square: true,
+    size: 'medium',
+  },
+};
+
+export const SquareLarge: Story = {
+  args: {
+    children: '>',
+    theme: 'filledInverted',
+    square: true,
+    size: 'large',
+  },
 };

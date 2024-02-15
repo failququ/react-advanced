@@ -3,16 +3,20 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import type { ButtonHTMLAttributes, FC } from 'react';
 import styles from './Button.module.scss';
 
-type ButtonTheme = 'clean' | 'outlined';
+type ButtonTheme = 'clean' | 'outlined' | 'filled' | 'filledInverted';
+
+type ButtonSize = 'small' | 'medium' | 'large';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   theme?: ButtonTheme;
+  square?: boolean;
+  size?: ButtonSize;
 }
 
 const Button: FC<ButtonProps> = (props) => {
   const {
-    className, children, theme, ...restProps
+    className, children, theme, square, size = 'small', ...restProps
   } = props;
   return (
     <button
@@ -23,6 +27,12 @@ const Button: FC<ButtonProps> = (props) => {
           {
             [styles.clean]: theme === 'clean',
             [styles.outlined]: theme === 'outlined',
+            [styles.filled]: theme === 'filled',
+            [styles.filledInverted]: theme === 'filledInverted',
+            [styles.square]: square,
+            [styles.small]: size === 'small',
+            [styles.medium]: size === 'medium',
+            [styles.large]: size === 'large',
           },
           [className],
         )
