@@ -7,10 +7,11 @@ import type { FC } from 'react';
 
 interface Props {
   className?: string;
+  short?: boolean;
 }
 
 const LangSwitch: FC<Props> = (props) => {
-  const { className } = props;
+  const { className, short } = props;
   const { t, i18n } = useTranslation();
 
   const handleChangeLang = () => {
@@ -23,7 +24,7 @@ const LangSwitch: FC<Props> = (props) => {
       theme="clean"
       onClick={handleChangeLang}
     >
-      {t('change-lang')}
+      {short ? t('change-lang-short') : t('change-lang')}
     </Button>
   );
 };
