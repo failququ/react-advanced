@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import type { ButtonHTMLAttributes, FC } from 'react';
 import styles from './Button.module.scss';
 
-type ButtonTheme = 'clean' | 'outlined' | 'filled' | 'filledInverted';
+type ButtonTheme = 'clean' | 'outlined' | 'filled' | 'filledInverted' | 'cleanInverted';
 
 type ButtonSize = 'small' | 'medium' | 'large';
 
@@ -26,6 +26,7 @@ const Button: FC<ButtonProps> = (props) => {
           styles.button,
           {
             [styles.clean]: theme === 'clean',
+            [styles.cleanInverted]: theme === 'cleanInverted',
             [styles.outlined]: theme === 'outlined',
             [styles.filled]: theme === 'filled',
             [styles.filledInverted]: theme === 'filledInverted',

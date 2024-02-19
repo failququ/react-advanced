@@ -10,5 +10,9 @@
   "sidebar": {
     "toggle": "тоггл"
   },
-  "throw-error": "Выбросить ошибку"
+  "throw-error": "Выбросить ошибку",
+  "modal":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam illo inventore quasi magni, magnam alias autem aliquam natus asperiores deserunt!",
+  "navbar": {
+    "login": "Войти"
+  }
 }
