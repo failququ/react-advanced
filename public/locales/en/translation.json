@@ -14,5 +14,9 @@
   "modal":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam illo inventore quasi magni, magnam alias autem aliquam natus asperiores deserunt!",
   "navbar": {
     "login": "Log in"
+  },
+  "counter": {
+    "increment": "increment",
+    "decrement": "decrement"
   }
 }
