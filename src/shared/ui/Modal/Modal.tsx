@@ -22,8 +22,8 @@ const Modal: FC<ModalProps> = (props) => {
   } = props;
 
   const ANIMATION_DELAY = 150;
-
   const { theme } = useTheme();
+
   const [isClosing, setIsClosing] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -62,9 +62,7 @@ const Modal: FC<ModalProps> = (props) => {
     <Portal>
       <div className={classNames(styles.modal, {
         [styles.opened]: isOpened,
-        [styles.dark]: theme === 'dark',
-        [styles.light]: theme === 'light',
-      }, [className])}
+      }, [className, theme])}
       >
         <div className={styles.overlay} onClick={handleCloseModal}>
           <div
