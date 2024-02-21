@@ -13,6 +13,8 @@ export default ({ config } :{config: webpack.Configuration}) => {
     src: path.resolve(__dirname, '..', '..', 'src'),
   };
 
+  const isDev = config.mode === 'development';
+
   config.resolve.modules.push(paths.src);
   config.resolve.modules.push('.ts', '.tsx');
 
@@ -24,6 +26,10 @@ export default ({ config } :{config: webpack.Configuration}) => {
 
     return rule;
   });
+
+  config.plugins.push(new webpack.DefinePlugin({
+    __IS_DEV__: JSON.stringify(isDev),
+  }));
 
   config.module.rules.push(buildSvgLoader());
   config.module.rules.push(buildCssLoader(true));
