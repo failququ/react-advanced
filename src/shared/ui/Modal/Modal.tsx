@@ -13,18 +13,20 @@ interface ModalProps {
   className?: string;
   children?: ReactNode;
   isOpened?: boolean;
+  lazy?:boolean;
   onClose?: () => void;
 }
 
 const Modal: FC<ModalProps> = (props) => {
   const {
-    className, children, isOpened, onClose,
+    className, children, isOpened, onClose, lazy,
   } = props;
 
   const ANIMATION_DELAY = 150;
   const { theme } = useTheme();
 
   const [isClosing, setIsClosing] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const handleCloseModal = useCallback(() => {
@@ -47,6 +49,7 @@ const Modal: FC<ModalProps> = (props) => {
     e.stopPropagation();
   };
 
+  // effect to clear timeout and closing modal via escape key
   useEffect(() => {
     if (isOpened) {
       window.addEventListener('keydown', onKeyDown);
@@ -57,6 +60,15 @@ const Modal: FC<ModalProps> = (props) => {
       window.removeEventListener('keydown', onKeyDown);
     };
   }, [isOpened, onKeyDown]);
+
+  // effect to optionally render modal lazy
+  useEffect(() => {
+    if (isOpened) {
+      setIsMounted(true);
+    }
+  }, [isOpened]);
+
+  if (lazy && !isMounted) return null;
 
   return (
     <Portal>

@@ -18,5 +18,14 @@
   "counter": {
     "increment": "increment",
     "decrement": "decrement"
+  },
+  "login-modal": {
+    "login-form": {
+      "login":"Log in",
+      "placeholders": {
+        "username": "Username",
+        "password": "Password"
+      }
+    }
   }
 }
