@@ -13,7 +13,8 @@
   "throw-error": "Выбросить ошибку",
   "modal":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam illo inventore quasi magni, magnam alias autem aliquam natus asperiores deserunt!",
   "navbar": {
-    "login": "Войти"
+    "login": "Войти",
+    "logout": "Выйти"
   },
   "counter": {
     "increment": "increment",
@@ -22,10 +23,12 @@
   "login-modal": {
     "login-form": {
       "login":"Войти",
+      "error-text": "Неверный логин или пароль",
       "placeholders": {
         "username": "Имя пользователя",
         "password": "Пароль"
       }
-    }
+    },
+    "title": "Авторизация"
   }
 }

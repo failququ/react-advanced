@@ -103,3 +103,12 @@ export const SquareLarge: Story = {
     size: 'large',
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    children: 'Text',
+    theme: 'outlined',
+    size: 'medium',
+    disabled: true,
+  },
+};

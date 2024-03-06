@@ -13,7 +13,8 @@
   "throw-error": "throw error",
   "modal":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam illo inventore quasi magni, magnam alias autem aliquam natus asperiores deserunt!",
   "navbar": {
-    "login": "Log in"
+    "login": "Log in",
+    "logout": "Log out"
   },
   "counter": {
     "increment": "increment",
@@ -22,10 +23,12 @@
   "login-modal": {
     "login-form": {
       "login":"Log in",
+      "error-text": "Incorrect login or password",
       "placeholders": {
         "username": "Username",
         "password": "Password"
       }
-    }
+    },
+    "title": "Authorization"
   }
 }

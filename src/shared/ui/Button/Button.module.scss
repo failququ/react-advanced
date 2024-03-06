@@ -64,3 +64,8 @@
 .large {
   font: var(--font-xl);
 }
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
