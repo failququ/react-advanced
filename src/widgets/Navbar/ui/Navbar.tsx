@@ -48,7 +48,7 @@ const Navbar: FC<NavbarProps> = (props) => {
       <Button className={styles.links} theme="cleanInverted" onClick={handleShowModal}>
         {t('navbar.login')}
       </Button>
-      <LoginModal isOpened={isAuthModal} onClose={handleCloseModal} />
+      {isAuthModal && <LoginModal isOpened={isAuthModal} onClose={handleCloseModal} />}
     </div>
   );
 };
